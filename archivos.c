@@ -3,6 +3,7 @@
 //
 #include <stdio.h>
 #include <time.h>
+#include <string.h>
 #include "archivos.h"
 #include "funcionesjuego.h"
 
