@@ -21,12 +21,13 @@ typedef struct {
     int retirado;
 } Jugador;
 typedef struct {
-    //variables para cada turno
+    //estructura que guarda el nombre del jugador y las dos fichas usadas en un turno, sirve para registrar la partida
     char nombreJugador[30];
     Ficha ficha1;
     Ficha ficha2;
 } Movimiento;
 typedef struct {
+    //estructura que almacena el nombre, la cantidad de pares formados y la fecha de la partida ganada
     char nombre[30];
     int pares;
     char fecha[20];
