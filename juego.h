@@ -4,5 +4,6 @@
 
 #ifndef UNTITLED4_JUEGO_H
 #define UNTITLED4_JUEGO_H
+void iniciarJuego();
 
 #endif //UNTITLED4_JUEGO_H

@@ -1,5 +1,6 @@
 #include <stdio.h>
-
+#include "juego.h"
+#include "archivos.h"
 int main(void) {
     //menu principal, utiliza switch case
     int opcion;
@@ -9,9 +10,11 @@ int main(void) {
         switch (opcion) {
             case 1:
                 //funcion para iniciar juego
+                iniciarJuego();
                 break;
-            case 2: break;
+            case 2: mostrarGanadores();
                 //funcion para ver lista en archivo
+                break;
             case 3: break;
                 //funcion para leer archivo
             case 4: printf("Fin de programa\n");
