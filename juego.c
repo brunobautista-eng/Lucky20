@@ -21,8 +21,8 @@ void iniciarJuego() //inicializa el juego, pide datos de jugadores, reparte fich
     int maximo;
     int i;
     int j;
-
-    printf("Numero de jugadores: ");
+do {
+    printf("Numero de jugadores(1-4): ");
     scanf("%d", &numJugadores);
     if(numJugadores > MAX_JUGADORES) {
         printf("Maximo 4 jugadores, intenta de nuevo");
