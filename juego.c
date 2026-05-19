@@ -140,10 +140,11 @@ do {
                     jugadores[i].retirado = 1;
                 }
                 else if(opcion == 4) { //modo prueba
-                    for (int l = 0; l < jugadores[i].cantidadFichas; l++) {
-                        for (int j = 0; j < cantidadBanco; j++) {
-                            if (forman20(jugadores[i].mano[l], banco[j])) {
-                                jugadores[i].mano[jugadores[i].cantidadFichas] = banco[j];
+                    int max = jugadores[i].cantidadFichas;
+                    for (int l = 0; l < max; l++) {
+                        for (int jk = 0; jk < cantidadBanco; jk++) {
+                            if (forman20(jugadores[i].mano[l], banco[jk])) {
+                                jugadores[i].mano[jugadores[i].cantidadFichas] = banco[jk];
                                 jugadores[i].cantidadFichas++;
                                 break;
                             }
