@@ -24,7 +24,13 @@ void iniciarJuego() //inicializa el juego, pide datos de jugadores, reparte fich
 
     printf("Numero de jugadores: ");
     scanf("%d", &numJugadores);
-
+    if(numJugadores > MAX_JUGADORES) {
+        printf("Maximo 4 jugadores, intenta de nuevo");
+    }
+    else if (numJugadores < 1) {
+        printf("Es de 1 minimo, intenta denuevo");
+    }
+}while (numJugadores<1 || numJugadores>MAX_JUGADORES);
     printf("Tipo domino (6,9,12): ");
     scanf("%d", &maximo);
 
