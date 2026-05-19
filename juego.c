@@ -143,7 +143,7 @@ do {
                     for (int l = 0; l < jugadores[i].cantidadFichas; l++) {
                         for (int j = 0; j < cantidadBanco; j++) {
                             if (forman20(jugadores[i].mano[l], banco[j])) {
-                                jugadores[i].mano[jugadores[i].cantidadFichas+(l+1)] = banco[j];
+                                jugadores[i].mano[jugadores[i].cantidadFichas+l] = banco[j];
                                 break;
                             }
                         }
