@@ -27,7 +27,7 @@ do {
     if(numJugadores > MAX_JUGADORES) {
         printf("Maximo 4 jugadores, intenta de nuevo");
     }
-    else if (numJugadores < 1) {
+    if (numJugadores < 1) {
         printf("Es de 1 minimo, intenta denuevo");
     }
 }while (numJugadores<1 || numJugadores>MAX_JUGADORES);
