@@ -4,7 +4,7 @@ int main(void) {
     //menu principal, utiliza switch case
     int opcion;
     do {
-        printf("1. Nueva partida \n 2. Ver ganadores \n 3. Reproducir partida \n");
+        printf("1. Nueva partida \n 2. Ver ganadores \n 3. Reproducir partida \n 4. Salir\n");
         scanf("%d",&opcion);
         switch (opcion) {
             case 1:
