@@ -6,4 +6,8 @@ set(CMAKE_C_STANDARD 23)
 add_executable(untitled4 main.c
         variables.h
         funcionesjuego.c
-        funcionesjuego.h)
+        funcionesjuego.h
+        archivos.c
+        archivos.h
+        juego.c
+        juego.h)

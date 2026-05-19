@@ -21,9 +21,14 @@ typedef struct {
     int retirado;
 } Jugador;
 typedef struct {
+    //variables para cada turno
     char nombreJugador[30];
     Ficha ficha1;
     Ficha ficha2;
 } Movimiento;
-
+typedef struct {
+    char nombre[30];
+    int pares;
+    char fecha[20];
+} Ganador;
 #endif //UNTITLED4_VARIABLES_H
