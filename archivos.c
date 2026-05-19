@@ -36,7 +36,7 @@ void mostrarGanadores() {
     while (fread(&ganador,sizeof(Ganador),1,archivo)) {
         printf("Jugador: %s\n",ganador.nombre);
         printf("Pares: %d\n",ganador.pares);
-        printf("Fecha: %d\n",ganador.fecha);
+        printf("Fecha: %s\n",ganador.fecha);
         fclose(archivo);
     }
 }
