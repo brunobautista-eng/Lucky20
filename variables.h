@@ -14,21 +14,21 @@ typedef struct {
 } Ficha;
 // valores para cada jugador
 typedef struct {
-    char nombre[30];
-    Ficha mano[100]; //arreglo que usa la estructura de una ficha para cada indice de variable
+    char nombre[MAX_NOMBRE];
+    Ficha mano[MAX_FICHAS]; //arreglo que usa la estructura de una ficha para cada indice de variable
     int cantidadFichas;
     int paresFormados;
     int retirado;
 } Jugador;
 typedef struct {
     //estructura que guarda el nombre del jugador y las dos fichas usadas en un turno, sirve para registrar la partida
-    char nombreJugador[30];
+    char nombreJugador[MAX_NOMBRE];
     Ficha ficha1;
     Ficha ficha2;
 } Movimiento;
 typedef struct {
     //estructura que almacena el nombre, la cantidad de pares formados y la fecha de la partida ganada
-    char nombre[30];
+    char nombre[MAX_NOMBRE];
     int pares;
     char fecha[20];
 } Ganador;

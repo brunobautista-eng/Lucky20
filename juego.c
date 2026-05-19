@@ -22,13 +22,13 @@ void iniciarJuego() //inicializa el juego, pide datos de jugadores, reparte fich
     int i;
     int j;
 do {
-    printf("Numero de jugadores(1-4): ");
+    printf("Numero de jugadores(1-4): \n");
     scanf("%d", &numJugadores);
     if(numJugadores > MAX_JUGADORES) {
-        printf("Maximo 4 jugadores, intenta de nuevo");
+        printf("Maximo 4 jugadores, intenta de nuevo\n");
     }
     if (numJugadores < 1) {
-        printf("Es de 1 minimo, intenta denuevo");
+        printf("Es de 1 minimo, intenta de nuevo\n");
     }
 }while (numJugadores<1 || numJugadores>MAX_JUGADORES);
     printf("Tipo domino (6,9,12): ");
@@ -71,17 +71,15 @@ do {
             if(jugadores[i].retirado == 0)
             {
                 activos++;
-
                 printf("\nTurno de %s\n", jugadores[i].nombre);
                 mostrarMano(jugadores[i]);
                 printf("\nFichas banco: %d\n", cantidadBanco - tope);
                 printf("\n1. Formar par");
                 printf("\n2. Pedir 4 fichas");
                 printf("\n3. Retirarse\n");
-
+                printf("\n4. Modo prueba\n");
                 int opcion;
                 scanf("%d", &opcion);
-
                 if(opcion == 1)
                 {
                     int a, b;
@@ -137,9 +135,19 @@ do {
                         tope++;
                     }
                 }
-                else
+                else if (opcion == 3)
                 {
                     jugadores[i].retirado = 1;
+                }
+                else if(opcion == 4) { //modo prueba
+                    for (int l = 0; l < jugadores[i].cantidadFichas; l++) {
+                        for (int j = 0; j < cantidadBanco; j++) {
+                            if (forman20(jugadores[i].mano[l], banco[j])) {
+                                jugadores[i].mano[jugadores[i].cantidadFichas+(l+1)] = banco[j];
+                                break;
+                            }
+                        }
+                        }
                 }
             }
 
